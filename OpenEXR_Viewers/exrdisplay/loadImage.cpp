@@ -845,7 +845,6 @@ loadDeepTileImage (MultiPartInputFile &inmaster,
             dataB[i] = new half[sampleCount[i]];
         }
     }
-
     in.readTiles (0, numXTiles - 1, 0, numYTiles - 1);
 
     //
@@ -903,6 +902,7 @@ loadImage (const char fileName[],
 {
     zsize = 0;
 
+    //
     MultiPartInputFile inmaster (fileName);
     Header h = inmaster.header(partnum);
     std::string  type = h.type();
